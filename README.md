@@ -1,7 +1,8 @@
 midterm-apartment-renting
 QONYS — Apartment Renting Website
 
-(image.png)
+<img width="1535" height="739" alt="image" src="https://github.com/user-attachments/assets/4192740a-aeb7-4e45-bd99-9a2300c0d7d1" />
+
 
 Project Topic
 QONYS is a responsive website about apartment renting in Almaty and Astana. It helps visitors explore sample apartments, compare rental prices and complete a demonstration enquiry form.
@@ -21,17 +22,18 @@ The Home page introduces the website, explains the apartment selection process, 
 
 The Apartments page displays three sample apartments with photographs, locations, room counts, floor areas and monthly prices. Each apartment has a button linking to the enquiry form on the Contact page.
 
-(image-1.png)
+<img width="1394" height="900" alt="image" src="https://github.com/user-attachments/assets/7e87d1ef-58fd-4864-8dbc-795da0890fd4" />
+
 
 The Prices page contains a comparison table showing apartment names, cities, room counts, areas, monthly rents and deposits. It also explains additional expenses and includes a sample first-month budget calculation.
 
-(image-2.png)
+<img width="1341" height="746" alt="image" src="https://github.com/user-attachments/assets/7b0d88c9-b331-47d8-a62d-6dde6414bd18" />
 
 The About Us page explains the project idea, its values and the main considerations when choosing an apartment.
 
 The Contact page contains example contact information and a demonstration form with name, email, apartment selection and message fields.
 
-(image-3.png)
+<img width="1383" height="840" alt="image" src="https://github.com/user-attachments/assets/51c2769f-f849-49e6-b3cd-6d0d1df3dda7" />
 
 Navigation and Page Structure
 All five pages include a header with the QONYS logo and a navigation menu. The navigation links connect all pages, and the current page is highlighted.
@@ -58,7 +60,10 @@ Images below the initial screen use loading="lazy".
 Responsive Design
 The website follows a desktop-first approach. Two custom media queries use maximum widths of 992px and 576px to adapt the layout for tablets and mobile phones.
 
-[📸 ВСТАВИТЬ СКРИНШОТ: Мобильная версия сайта (ширина до 576px). Покажите, как шапка перестраивается вертикально, а карточки квартир выстраиваются в одну колонку]
+<img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/70730d97-45ef-48a6-9512-95bcbd85fd86" />  <img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/d9adcc1a-04a2-44bc-91ac-b3eb8bf491fb" />
+<img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/9a403991-502f-4e82-81b0-3262fdb4d9a0" />
+
+
 
 On smaller screens, the header changes to a vertical layout, navigation links wrap and grid sections use fewer columns. On mobile screens, apartment cards are displayed in one column. Font sizes, spacing and padding are adjusted for smaller viewports.
 Bootstrap grid classes such as row, col-md-4, col-md-6 and col-md-7 arrange page sections.
