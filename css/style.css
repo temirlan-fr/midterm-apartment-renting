@@ -580,3 +580,64 @@ footer small {
     border-left: 3px solid #91603a;
     font-size: 15px;
 }
+
+
+
+.price-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    background-color: #fffcf8;
+}
+
+.price-table caption {
+    caption-side: top;
+    margin-bottom: 12px;
+    color: #626a73;
+}
+
+.price-table th,
+.price-table td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid #ded4c8;
+}
+
+.price-table thead {
+    color: white;
+    background-color: var(--navy);
+}
+
+/* Alternating rows */
+
+.price-table tbody tr:nth-child(even) {
+    background-color: #e9dfd2;
+}
+
+/* Budget example */
+
+.budget-box {
+    padding: 25px;
+    background-color: #fffcf8;
+    border: 1px solid #ded4c8;
+    border-radius: 4px;
+}
+
+.budget-box h3 {
+    margin-bottom: 20px;
+}
+
+.budget-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ded4c8;
+}
+
+.budget-total {
+    color: #172539;
+    font-size: 20px;
+    font-weight: 700;
+}
