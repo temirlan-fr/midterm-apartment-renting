@@ -1,11 +1,24 @@
-* {
-    box-sizing: border-box;
-}
+/* CSS variables */
 
 :root {
     --navy: #172539;
     --brown: #bf9570;
     --cream: #f5efe7;
+}
+
+/* General styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #263142;
+    background-color: var(--cream);
 }
 
 h1,
@@ -79,18 +92,7 @@ img {
     margin-top: 30px;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #263142;
-    background-color: var(--cream);
-}
+/* Header: Flexbox */
 
 header {
     color: white;
@@ -143,7 +145,10 @@ header {
 
 .nav-links a.active {
     color: #dfb58d;
-    border-bottom-color: #bf9570;}
+    border-bottom-color: #bf9570;
+}
+
+/* Buttons */
 
 .main-button,
 .outline-button {
@@ -204,6 +209,7 @@ header {
     color: #172539;
 }
 
+/* Home page: Grid */
 
 .hero {
     padding: 60px 0;
@@ -275,6 +281,7 @@ header {
     font-size: 14px;
 }
 
+/* Positioning */
 
 .hero-image {
     position: relative;
@@ -307,6 +314,7 @@ header {
     font-size: 14px;
 }
 
+/* Information cards */
 
 .feature-card {
     height: 100%;
@@ -328,6 +336,8 @@ header {
     font-weight: 700;
 }
 
+/* Featured apartment */
+
 .featured-image {
     position: relative;
 }
@@ -347,6 +357,8 @@ header {
     color: #172539;
     font-size: 25px;
 }
+
+/* Frequently asked questions */
 
 .faq-list {
     margin-bottom: 25px;
@@ -378,6 +390,8 @@ header {
     margin: 15px 0 0;
     color: #4e5864;
 }
+
+/* Banner */
 
 .banner {
     padding: 50px 0;
@@ -428,4 +442,141 @@ footer small {
     text-align: center;
     border-top: 1px solid #3c4858;
     font-size: 14px;
+}
+
+.page-heading {
+    padding: 50px 0;
+    color: white;
+    background-color: var(--navy);
+}
+
+.page-heading h1 {
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+.page-heading .subtitle {
+    color: #dfb58d;
+}
+
+.page-heading p:last-child {
+    max-width: 650px;
+    margin-bottom: 0;
+    color: #c6ced8;
+}
+
+/* Apartments: Grid */
+
+.apartment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 25px;
+}
+
+.apartment-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background-color: #fffcf8;
+    border: 1px solid #ded4c8;
+    border-radius: 4px;
+    scroll-margin-top: 25px;
+}
+
+.card-image {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 240px;
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    background-color: #f5efe7;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 22px;
+}
+
+.card-info h2 {
+    font-size: 25px;
+}
+
+.location {
+    color: #626a73;
+    font-size: 14px;
+}
+
+.apartment-details {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    color: #4e5864;
+}
+
+.apartment-details li {
+    margin-bottom: 6px;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #ded4c8;
+}
+
+.apartment-price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+
+.apartment-price strong {
+    color: #172539;
+    font-size: 22px;
+}
+
+.apartment-price span {
+    color: #626a73;
+    font-size: 14px;
+}
+
+.card-bottom .main-button {
+    width: 100%;
+    font-size: 15px;
+}
+
+/* Lists and notes */
+
+.simple-list {
+    margin-bottom: 0;
+    padding-left: 22px;
+}
+
+.simple-list li {
+    margin-top: 10px;
+}
+
+.notice {
+    padding: 16px;
+    background-color: #e9dfd2;
+    border-left: 3px solid #91603a;
+    font-size: 15px;
 }
