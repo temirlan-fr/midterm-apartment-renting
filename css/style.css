@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --navy: #172539;
     --brown: #bf9570;
