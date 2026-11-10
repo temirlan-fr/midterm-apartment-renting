@@ -43,8 +43,21 @@
                     <p>Three sample apartments in Almaty and Astana.</p>
                 </div>
 
+                <div class="mb-4">
+                    <label for="apartment-search" class="form-label">Search by name, city or district</label>
+                    <input type="search" id="apartment-search" class="form-control mb-3" placeholder="Try Cozy Corner">
+
+                    <div id="city-filters" class="d-flex flex-wrap gap-2" role="group" aria-label="Filter by city">
+                        <button type="button" class="btn main-button" data-city="all" aria-pressed="true">All</button>
+                        <button type="button" class="btn outline-button" data-city="almaty" aria-pressed="false">Almaty</button>
+                        <button type="button" class="btn outline-button" data-city="astana" aria-pressed="false">Astana</button>
+                    </div>
+
+                    <p id="search-result" class="mt-2" role="status">3 apartments found.</p>
+                </div>
+
                 <div class="apartment-grid">
-                    <article class="apartment-card" id="blue-horizon">
+                    <article class="apartment-card" id="blue-horizon" data-city="Almaty">
                         <div class="card-image">
                             <img src="hs1.jpg" alt="Blue Horizon living room with a blue sofa and large windows" width="900" height="600" loading="lazy">
                             <span class="tag">Bright and spacious</span>
@@ -68,7 +81,7 @@
                         </div>
                     </article>
 
-                    <article class="apartment-card" id="cozy-corner">
+                    <article class="apartment-card" id="cozy-corner" data-city="Astana">
                         <div class="card-image">
                             <img src="hs2.jpg" alt="Cozy Corner living room with warm brown furniture" width="900" height="600" loading="lazy">
                             <span class="tag">Warm and welcoming</span>
@@ -92,7 +105,7 @@
                         </div>
                     </article>
 
-                    <article class="apartment-card" id="sunlit-home">
+                    <article class="apartment-card" id="sunlit-home" data-city="Almaty">
                         <div class="card-image">
                             <img src="hs3.jpg" alt="Sunlit Home with a spacious and bright living area" width="900" height="600" loading="lazy">
                             <span class="tag">Room for everyone</span>
@@ -189,5 +202,6 @@
         <p class="copyright">© 2026 QONYS. Student project. Listings and contact details are examples.</p>
     </footer>
 
+    <script src="js/apartments.js"></script>
 
 </body>
