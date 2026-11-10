@@ -96,6 +96,48 @@
                 </div>
             </div>
         </section>
+
+        <section class="section soft-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <form id="registration" class="contact-form" action="#registration-note">
+                            <h2>Renter Registration</h2>
+                            <p>Use a practice password. All fields are required.</p>
+
+                            <div class="mb-3">
+                                <label for="reg-name" class="form-label">Full name</label>
+                                <input id="reg-name" class="form-control" type="text" autocomplete="name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reg-email" class="form-label">Email address</label>
+                                <input id="reg-email" class="form-control" type="email" autocomplete="email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reg-password" class="form-label">Password</label>
+                                <input id="reg-password" class="form-control" type="password" autocomplete="new-password" minlength="8" required>
+                                <small class="d-block">Use at least 8 characters, including a letter and a number.</small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reg-confirm" class="form-label">Confirm password</label>
+                                <input id="reg-confirm" class="form-control" type="password" autocomplete="new-password" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reg-message" class="form-label">What kind of apartment do you need?</label>
+                                <textarea id="reg-message" class="form-control" rows="3" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn main-button">Check registration</button>
+                            <p id="registration-note" class="mt-3" role="status">Practice form. No account or booking is created.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
