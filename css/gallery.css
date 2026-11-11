@@ -1,0 +1,17 @@
+.gallery-photo {
+    display: block;
+    color: var(--navy);
+    background-color: var(--cream);
+    border: 1px solid var(--brown);
+}
+
+.gallery-photo img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.gallery-photo span {
+    display: block;
+    padding: 10px 14px;
+}
