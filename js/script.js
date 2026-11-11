@@ -1,53 +1,107 @@
-const searchBox = document.querySelector("#apartment-search");
-const cards = document.querySelectorAll(".apartment-card");
-const cityButtons = document.querySelectorAll("#city-filters button");
-const searchResult = document.querySelector("#search-result");
+const registration = document.querySelector("#registration");
+const fields = registration.querySelectorAll("input, textarea");
+const password = document.querySelector("#reg-password");
+const confirmation = document.querySelector("#reg-confirm");
+const result = document.querySelector("#registration-note");
 
-let selectedCity = "all";
+registration.noValidate = true;
 
-function filterApartments() {
-    const search = searchBox.value.trim().toLowerCase();
-    let count = 0;
+function getStrength(value) {
+    if (value === "") {
+        return 0;
+    }
 
-    cards.forEach(function (card) {
-        const name = card.querySelector("h2").textContent;
-        const location = card.querySelector(".location").textContent;
-        const words = (name + " " + location).toLowerCase();
-        const city = card.dataset.city.toLowerCase();
+    if (value.length >= 10 && /[a-z]/.test(value) && /[A-Z]/.test(value) && /[0-9]/.test(value)) {
+        return 3;
+    }
 
-        const matchesText = words.includes(search);
-        const matchesCity = selectedCity === "all" || city === selectedCity;
-        const visible = matchesText && matchesCity;
+    if (value.length >= 8 && /[a-zA-Z]/.test(value) && /[0-9]/.test(value)) {
+        return 2;
+    }
 
-        card.classList.toggle("d-none", !visible);
+    return 1;
+}
 
-        if (visible) {
-            count++;
+function updateMeter() {
+    const level = getStrength(password.value);
+    const labels = ["Not entered", "Weak", "Medium", "Strong"];
+
+    document.querySelector("#strength-meter").value = level;
+    document.querySelector("#strength-text").textContent = labels[level];
+}
+
+function checkField(field) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const feedback = document.getElementById(field.id + "-feedback");
+    let error = "";
+
+    if (field.value.trim() === "") {
+        error = "This field is required.";
+    } else if (field.id === "reg-email" && !emailPattern.test(field.value.trim())) {
+        error = "Enter an email such as name@example.com.";
+    } else if (field === password && getStrength(field.value) < 2) {
+        error = "Use at least 8 characters with a letter and a number.";
+    } else if (field === confirmation && field.value !== password.value) {
+        error = "The passwords do not match.";
+    }
+
+    const valid = error === "";
+
+    field.classList.toggle("is-valid", valid);
+    field.classList.toggle("is-invalid", !valid);
+    field.setAttribute("aria-invalid", String(!valid));
+    feedback.textContent = valid ? "Looks good." : error;
+    feedback.className = valid ? "d-block text-success" : "d-block text-danger";
+
+    return valid;
+}
+
+fields.forEach(function (field) {
+    const feedback = document.createElement("small");
+    feedback.id = field.id + "-feedback";
+    feedback.setAttribute("aria-live", "polite");
+    field.parentElement.appendChild(feedback);
+    field.setAttribute("aria-describedby", feedback.id);
+
+    field.addEventListener("input", function () {
+        result.textContent = "";
+        checkField(field);
+
+        if (field === password) {
+            updateMeter();
+
+            if (confirmation.value !== "") {
+                checkField(confirmation);
+            }
+        }
+    });
+});
+
+registration.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let firstInvalid = null;
+
+    fields.forEach(function (field) {
+        if (!checkField(field) && firstInvalid === null) {
+            firstInvalid = field;
         }
     });
 
-    if (count === 0) {
-        searchResult.textContent = "No apartments found. Try another city or name.";
-    } else if (count === 1) {
-        searchResult.textContent = "1 apartment found.";
-    } else {
-        searchResult.textContent = count + " apartments found.";
+    if (firstInvalid !== null) {
+        result.textContent = "Please correct the marked fields.";
+        firstInvalid.focus();
+        return;
     }
-}
 
-searchBox.addEventListener("input", filterApartments);
+    registration.reset();
+    updateMeter();
 
-cityButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-        selectedCity = button.dataset.city;
-
-        cityButtons.forEach(function (item) {
-            const active = item === button;
-            item.setAttribute("aria-pressed", String(active));
-            item.classList.toggle("main-button", active);
-            item.classList.toggle("outline-button", !active);
-        });
-
-        filterApartments();
+    fields.forEach(function (field) {
+        field.classList.remove("is-valid", "is-invalid");
+        field.removeAttribute("aria-invalid");
+        document.getElementById(field.id + "-feedback").textContent = "";
     });
+
+    result.textContent = "Registration checks passed. No account or password was saved.";
 });

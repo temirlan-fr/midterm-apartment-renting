@@ -121,6 +121,12 @@
                                 <small class="d-block">Use at least 8 characters, including a letter and a number.</small>
                             </div>
 
+                            <div>
+                                <label for="strength-meter">Password strength:</label>
+                                <meter id="strength-meter" min="0" max="3" low="1.5" high="2.5" optimum="3" value="0"></meter>
+                                <span id="strength-text">Not entered</span>
+                            </div>
+
                             <div class="mb-3">
                                 <label for="reg-confirm" class="form-label">Confirm password</label>
                                 <input id="reg-confirm" class="form-control" type="password" autocomplete="new-password" required>
@@ -163,6 +169,8 @@
 
         <p class="copyright">© 2026 QONYS. Student project. Listings and contact details are examples.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
