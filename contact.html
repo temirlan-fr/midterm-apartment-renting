@@ -6,7 +6,7 @@
     <title>QONYS | Contact</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -101,34 +101,40 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <form id="registration" class="contact-form" action="#registration-note">
+                        <form id="registration" class="contact-form" action="#registration-note" novalidate>
                             <h2>Renter Registration</h2>
                             <p>Use a practice password. All fields are required.</p>
 
                             <div class="mb-3">
                                 <label for="reg-name" class="form-label">Full name</label>
-                                <input id="reg-name" class="form-control" type="text" autocomplete="name" required>
+                                <input id="reg-name" aria-describedby="reg-name-feedback" class="form-control" type="text" autocomplete="name" required>
+                                <div id="reg-name-feedback" class="invalid-feedback" aria-live="polite"></div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="reg-email" class="form-label">Email address</label>
-                                <input id="reg-email" class="form-control" type="email" autocomplete="email" required>
+                                <input id="reg-email" aria-describedby="reg-email-feedback" class="form-control" type="email" autocomplete="email" required>
+                                <div id="reg-email-feedback" class="invalid-feedback" aria-live="polite"></div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="reg-password" class="form-label">Password</label>
-                                <input id="reg-password" class="form-control" type="password" autocomplete="new-password" minlength="8" required>
-                                <small class="d-block">Use at least 8 characters, including a letter and a number.</small>
+                                <input id="reg-password" aria-describedby="reg-password-help password-strength reg-password-feedback" class="form-control" type="password" autocomplete="new-password" minlength="8" required>
+                                <small id="reg-password-help" class="d-block">Use at least 8 characters, including a letter and a number.</small>
+                                <div id="password-strength" class="password-strength" role="status"></div>
+                                <div id="reg-password-feedback" class="invalid-feedback" aria-live="polite"></div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="reg-confirm" class="form-label">Confirm password</label>
-                                <input id="reg-confirm" class="form-control" type="password" autocomplete="new-password" required>
+                                <input id="reg-confirm" aria-describedby="reg-confirm-feedback" class="form-control" type="password" autocomplete="new-password" required>
+                                <div id="reg-confirm-feedback" class="invalid-feedback" aria-live="polite"></div>
                             </div>
 
                             <div class="mb-3">
                                 <label for="reg-message" class="form-label">What kind of apartment do you need?</label>
-                                <textarea id="reg-message" class="form-control" rows="3" required></textarea>
+                                <textarea id="reg-message" aria-describedby="reg-message-feedback" class="form-control" rows="3" required></textarea>
+                                <div id="reg-message-feedback" class="invalid-feedback" aria-live="polite"></div>
                             </div>
 
                             <button type="submit" class="btn main-button">Check registration</button>
@@ -164,5 +170,6 @@
         <p class="copyright">© 2026 QONYS. Student project. Listings and contact details are examples.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
