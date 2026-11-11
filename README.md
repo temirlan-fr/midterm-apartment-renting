@@ -61,7 +61,10 @@ The recorded original project contributions are listed below.
 Temirlan Bolat created the Home, Apartments and Prices pages.
 Akshit Khokher created the About Us and Contact pages.
 Kairatuly Miras created the shared CSS styles.
-The team should add each member's actual endterm contribution before submission. Each member should understand the whole project and be able to explain the code during the defence.
+Endterm contributions
+Akshit Khokher developed the renter registration form, email validation, password confirmation, strength meter and live field feedback.
+Temirlan Bolat developed apartment search, city filters, the responsive photo gallery and the lightbox with jQuery fade effects.
+Miras Kairatuly developed the viewing shortlist, inline editing, confirmed deletion and project documentation. Each member should understand the whole project and be able to explain the code during the defence.
 
 Testing
 Local browser checks cover shortlist creation, editing, cancellation and confirmed deletion, registration validation, password strength, combined search and city filters, gallery navigation and closing, and page layouts at 390px, 768px and 1440px.
@@ -75,3 +78,17 @@ Continue using the original repository for the endterm project.
 Content and Image Credits
 Apartment names, prices and contact details are examples for a student project. Photos do not represent verified rental listings. The contact email uses an example domain and social links lead to general platforms.
 The original template photo sources were Clay Banks on Unsplash, Curtis Adams on Pexels and Furkan Tumer on Pexels. If photos are replaced, update the credits to match the images used.
+
+Project Screenshots
+
+<img width="1448" height="923" alt="image" src="https://github.com/user-attachments/assets/76ccc59a-1e8c-4ed3-acce-53ddc446930e" />
+
+<img width="970" height="888" alt="image" src="https://github.com/user-attachments/assets/e71661d8-00a0-426c-9ebe-3494d9b613bc" />
+
+<img width="1406" height="751" alt="image" src="https://github.com/user-attachments/assets/1b43ba39-5102-4179-8fb3-9cbc80943946" />
+
+<img width="1337" height="884" alt="image" src="https://github.com/user-attachments/assets/c90cf212-74e2-4c09-89d9-60021146260a" />
+
+<img width="1407" height="396" alt="image" src="https://github.com/user-attachments/assets/3ed8b24b-4cb0-48b8-9339-ecf6f937f240" />
+
+<img width="1386" height="640" alt="image" src="https://github.com/user-attachments/assets/76cd1f4d-960c-4bf4-b30d-faee46c4f643" />
