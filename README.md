@@ -1,141 +1,61 @@
-midterm-apartment-renting
-QONYS — Apartment Renting Website
+QONYS Apartment Renting Website
 
-<img width="1535" height="739" alt="image" src="https://github.com/user-attachments/assets/4192740a-aeb7-4e45-bd99-9a2300c0d7d1" />
+Project topic
 
+QONYS is a student website for exploring and comparing sample rental apartments in Almaty and Astana. Our endterm project extends the original midterm website in the same repository.
 
-Project Topic
-QONYS is a responsive website about apartment renting in Almaty and Astana. It helps visitors explore sample apartments, compare rental prices and complete a demonstration enquiry form.
+<img width="1448" height="923" alt="image" src="https://github.com/user-attachments/assets/76ccc59a-1e8c-4ed3-acce-53ddc446930e" />
 
-Group Members
-Temirlan Bolat
+Team members and contributions
 
-Kairatuly Miras
+Akshit Khokher developed the renter registration form, email validation, password confirmation, strength meter and live field feedback.
 
-Akshit Khokher
+<img width="970" height="888" alt="image" src="https://github.com/user-attachments/assets/e71661d8-00a0-426c-9ebe-3494d9b613bc" />
 
-Project Description
-The website contains five connected pages: Home, Apartments, Prices, About Us and Contact. Dark blue and warm brown colours create a consistent appearance that matches the apartment renting theme. The website uses simple HTML and CSS techniques covered in our course, together with Bootstrap.
-
-Pages and Features
-The Home page introduces the website, explains the apartment selection process, presents a featured apartment and includes frequently asked questions.
-
-The Apartments page displays three sample apartments with photographs, locations, room counts, floor areas and monthly prices. Each apartment has a button linking to the enquiry form on the Contact page.
-
-<img width="1394" height="900" alt="image" src="https://github.com/user-attachments/assets/7e87d1ef-58fd-4864-8dbc-795da0890fd4" />
+<img width="1406" height="751" alt="image" src="https://github.com/user-attachments/assets/1b43ba39-5102-4179-8fb3-9cbc80943946" />
 
 
-The Prices page contains a comparison table showing apartment names, cities, room counts, areas, monthly rents and deposits. It also explains additional expenses and includes a sample first-month budget calculation.
+Temirlan Bolat developed apartment search, city filters, the responsive photo gallery and the lightbox with jQuery fade effects.
 
-<img width="1341" height="746" alt="image" src="https://github.com/user-attachments/assets/7b0d88c9-b331-47d8-a62d-6dde6414bd18" />
+<img width="1337" height="884" alt="image" src="https://github.com/user-attachments/assets/c90cf212-74e2-4c09-89d9-60021146260a" />
 
-The About Us page explains the project idea, its values and the main considerations when choosing an apartment.
+<img width="1407" height="396" alt="image" src="https://github.com/user-attachments/assets/3ed8b24b-4cb0-48b8-9339-ecf6f937f240" />
 
-The Contact page contains example contact information and a demonstration form with name, email, apartment selection and message fields.
+Miras Kairatuly developed the viewing shortlist, inline editing, confirmed deletion and project documentation.
 
-<img width="1383" height="840" alt="image" src="https://github.com/user-attachments/assets/51c2769f-f849-49e6-b3cd-6d0d1df3dda7" />
-
-Navigation and Page Structure
-All five pages include a header with the QONYS logo and a navigation menu. The navigation links connect all pages, and the current page is highlighted.
-Each page has a main element containing content specific to that page. Every page also includes a footer with contact information, copyright text and social media links.
-Semantic HTML5 elements include header, nav, main, section, article and footer. The code is organised with consistent indentation.
-
-HTML Features
-The website uses headings, paragraphs, ordered and unordered lists, links and images. Each page has one main h1 heading, with h2 and h3 headings organising the remaining content.
-Images include descriptive alt text. Div elements group content for layout, while span elements style smaller parts of text, including prices and the logo.
-The Prices page includes a table with caption, thead, tbody, th and td elements. Scope attributes identify column and row headings.
-The Contact page includes a form with labels, inputs, a select element, a textarea and a submit button. Labels are connected to their fields through matching for and id attributes.
-
-CSS Features
-Custom styles are stored in an external stylesheet. The required final location is css/style.css, linked from all five HTML pages. No inline styles or internal style elements are used.
-Selectors control colours, fonts, spacing, borders and alignment consistently. Classes style reusable elements such as cards and buttons. IDs such as request and demo identify specific sections and are also used for styling.
-Flexbox is used in the header, navigation, button groups and apartment cards. CSS Grid is used for the main introductory section, apartment collection and footer.
-Relative and absolute positioning place labels over images.
-Hover styles change link and button colours. Focus styles highlight interactive elements for keyboard navigation.
-The nth-child(even) pseudo-class applies alternating background colours to table rows.
-Three CSS variables are defined in :root: --navy, --brown and --cream.
-Roboto is loaded through Google Fonts, with Arial and sans-serif as fallback fonts.
-Images below the initial screen use loading="lazy".
-
-Responsive Design
-The website follows a desktop-first approach. Two custom media queries use maximum widths of 992px and 576px to adapt the layout for tablets and mobile phones.
-
-<img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/70730d97-45ef-48a6-9512-95bcbd85fd86" />  <img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/d9adcc1a-04a2-44bc-91ac-b3eb8bf491fb" />
-<img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/9a403991-502f-4e82-81b0-3262fdb4d9a0" />
+<img width="1386" height="640" alt="image" src="https://github.com/user-attachments/assets/76cd1f4d-960c-4bf4-b30d-faee46c4f643" />
 
 
+Website
 
-On smaller screens, the header changes to a vertical layout, navigation links wrap and grid sections use fewer columns. On mobile screens, apartment cards are displayed in one column. Font sizes, spacing and padding are adjusted for smaller viewports.
-Bootstrap grid classes such as row, col-md-4, col-md-6 and col-md-7 arrange page sections.
-Bootstrap utility and component classes include container, g-4, g-5, mb-3, mt-4, text-center, align-items-center and btn.
-The price table is placed inside a table-responsive container so it can scroll horizontally on narrow screens.
+The website has five pages: Home, Apartments, Prices, About Us and Contact. Visitors can explore furnished apartments, compare monthly rent and deposits, and practise completing an enquiry. The original navigation, contact form, price comparison table and responsive design remain in place.
 
-Design and Usability
-The apartment renting theme is maintained across all pages through consistent colours, typography, images and navigation.
-Buttons use simple styling and clear labels. Apartment buttons open the Contact form, where visitors select their preferred apartment manually.
-Frequently asked questions use the HTML details and summary elements. No JavaScript is required.
+Registration
 
-Technologies Used
-HTML5 provides the page structure and form elements.
+The registration form checks the name, email, password, password confirmation and message before completion. It checks email format with a regular expression and gives feedback as the visitor types. A meter displays weak, medium and strong passwords. The passwords must match. Invalid entries prevent completion. The demonstration does not create an account or save passwords.
 
-CSS3 provides colours, typography, spacing, Flexbox, Grid, positioning and media queries.
+Apartment search
 
-Bootstrap 5.3.3 CSS provides the responsive grid, utility classes and basic components.
+Visitors can search by apartment name, city or district. Search ignores letter case and updates the apartment cards without reloading the page. The All, Almaty and Astana buttons work together with the search field. The page displays the number of matches or a message when no apartments match.
 
-Google Fonts provides the Roboto font.
+Viewing shortlist
 
-No JavaScript or backend is used.
+The Prices page contains a dynamic table separate from the original rental price comparison. Visitors can add apartments, read the current records, edit values directly in a row and delete a record after confirmation. Cancelling an edit or deletion preserves the original information. The shortlist resets when the page is reloaded.
 
-Form Behaviour
-The form demonstrates built-in browser validation through required fields, minlength and type="email".
-After successful validation, the browser navigates to the demonstration message on the Contact page.
-The form does not send messages, store personal information or create bookings. Form fields intentionally do not have name attributes, so their contents are not included in the submission URL.
+Photo gallery
 
-Project Files
-index.html contains the Home page.
+The Apartments page displays photographs in a responsive Bootstrap grid. Selecting a photograph opens a larger view with previous and next arrows. jQuery fade effects animate opening, closing and switching photographs. Visitors can also use the arrow keys and Escape.
 
-apartments.html contains the apartment listings.
+Technologies
 
-prices.html contains the comparison table and budget example.
+HTML5 provides the page structure. External CSS, Flexbox, CSS Grid, Bootstrap and media queries provide the layout and responsive design. JavaScript handles form validation, searching and shortlist records. jQuery handles the gallery events and fade effects.
 
-about.html contains the project description and values.
+Running the project
 
-contact.html contains the contact information and form.
+Open index.html in a browser. Internet access is required for libraries, fonts and images linked from external sources. Apartment details and prices are examples rather than verified rental offers.
 
-css/style.css contains the custom stylesheet.
+Repository
 
-hs1.jpg, hs2.jpg and hs3.jpg contain the local apartment images.
+https://github.com/temirlan-fr/midterm-apartment-renting
 
-README.md contains the project documentation.
-
-Bootstrap is currently linked through a CDN. A local Bootstrap CSS file must also be included in the submission folder to meet the requirement for Bootstrap files, with the HTML links updated accordingly.
-
-How to Run
-Open index.html in a browser while keeping the project folder structure unchanged.
-Internet access is needed for Bootstrap while it is loaded through the CDN, Google Fonts and any photographs that still use external links.
-
-Individual Contributions
-Temirlan Bolat : Create index, apartment and price pages
-
-Akshit Khokher : Create About and contact pages
-
-Kairatuly Miras: Create whole css style for the site
-
-Each member should record only the work they actually completed. Each member must also understand the entire project, including sections developed by other group members.
-
-Testing
-The submitted ZIP was checked for the presence of all five pages, navigation targets, local file references, section anchors, form labels and basic HTML structure. No broken local references or duplicate IDs were found in that version.
-After the final edits, browser testing must confirm that all pages open, images load, buttons lead to the correct destinations and the form rejects missing required fields and invalid email addresses.
-The final layout must also be checked at desktop, tablet and mobile widths. Keyboard navigation should confirm that links, buttons and form fields have visible focus styles.
-
-Publication
-Published website URL: https://temirlan-fr.github.io/midterm-apartment-renting/
-
-GitHub repository URL: https://github.com/temirlan-fr/midterm-apartment-renting
-
-Publication is not confirmed until the deployed website is accessible and its pages have been checked.
-
-Content and Image Credits
-Apartment names, prices and contact information are examples created for this student project. Photographs illustrate interiors and do not represent verified rental listings.
-The contact email uses an example domain. Social media links lead to general platform pages rather than official QONYS accounts.
-The original photo sources used in the provided template were Clay Banks on Unsplash, Curtis Adams on Pexels and Furkan Tumer on Pexels. If the local images have been replaced, update these credits to match the images actually used.
+Published website
