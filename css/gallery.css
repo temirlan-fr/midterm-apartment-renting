@@ -15,3 +15,24 @@
     display: block;
     padding: 10px 14px;
 }
+
+#photo-viewer {
+    width: 90%;
+    max-width: 800px;
+    max-height: 92vh;
+    padding: 20px;
+    color: var(--navy);
+    background-color: var(--cream);
+    border: 0;
+}
+
+#photo-viewer::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#large-photo {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+}

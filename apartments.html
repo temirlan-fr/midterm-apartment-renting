@@ -207,6 +207,19 @@
                 </div>
             </div>
         </section>
+
+        <dialog id="photo-viewer" aria-labelledby="photo-title">
+            <div id="photo-panel">
+                <h3 id="photo-title"></h3>
+                <img id="large-photo" alt="">
+
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <button type="button" id="previous-photo" class="btn outline-button" aria-label="Previous photo">←</button>
+                    <button type="button" id="next-photo" class="btn outline-button" aria-label="Next photo">→</button>
+                    <button type="button" id="close-photo" class="btn main-button">Close</button>
+                </div>
+            </div>
+        </dialog>
     </main>
 
     <footer>
@@ -233,6 +246,7 @@
         <p class="copyright">© 2026 QONYS. Student project. Listings and contact details are examples.</p>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/apartments.js"></script>
 
 </body>
