@@ -1,83 +1,156 @@
 QONYS Apartment Renting Website
 
 Project Topic
+
 Apartment renting in Almaty and Astana.
 
 Group Members
+
 Temirlan Bolat
 Kairatuly Miras
 Akshit Khokher
 
 Project Description
-QONYS is a student website that helps visitors explore sample apartments, compare rental prices and try enquiry and registration forms. The endterm project extends the original five pages with JavaScript features. Dark blue and warm brown colours keep the original apartment renting theme.
 
-Pages and Features
-Home introduces the project, explains how to choose an apartment and includes a featured apartment and frequently asked questions.
+QONYS is a student website for exploring sample apartments, comparing rental prices and planning apartment viewings. The final project extends the Endterm website with persistent theme selection, demo sign-in, an animated FAQ and a public weather API.
 
-Apartments displays three sample apartments with images, locations, room counts, areas and monthly rents. Live search matches apartment names and locations without depending on letter case. City buttons filter Almaty and Astana listings. Search and city filters work together and show the number of matching apartments. A gallery uses Bootstrap columns and a lightbox with previous, next and close buttons. Keyboard arrows change images and Escape closes the lightbox. jQuery fade effects animate the gallery.
+Website Pages
 
-Prices includes a rental comparison table, extra expenses and a first-month budget example. My Viewing Shortlist lets visitors add apartments, edit table rows, save or cancel edits and delete entries after confirmation. JavaScript updates the table without reloading the page. The shortlist is stored in memory and resets when the page reloads.
+Home introduces the website and contains a featured apartment, apartment selection steps and five frequently asked questions.
 
-About Us explains the project idea, values and apartment selection considerations.
+Apartments displays sample apartments with photos, locations, room counts, areas and monthly rents. Visitors can search by name or location, filter by city, open the photo gallery and check the weather before an apartment viewing.
 
-Contact includes example contact information, the original demonstration enquiry form and a registration form. Registration checks the name, email, message, password and password confirmation. Empty fields and invalid email formats are rejected. Password strength updates while typing. Medium passwords have at least eight characters with a letter and a number. Strong passwords have at least ten characters with lowercase letters, uppercase letters and numbers. Password confirmation must match. Invalid submission is blocked and feedback appears beside each field. Successful validation displays a message and resets the form. No account is created and no password is saved.
+Prices contains a rental comparison table, a first-month budget example and an editable viewing shortlist.
 
-Navigation and HTML
-All five pages share a header, logo, navigation and footer. The current page is highlighted. Each page uses a main element for its main content. Semantic elements include header, nav, main, section, article and footer.
-The website uses headings, paragraphs, lists, links and images with alternative text. Tables use captions, column headings and table bodies. Form labels are connected to their controls. Div and span elements group and style content.
+About Us explains the project idea and apartment selection considerations.
 
-CSS and Responsive Design
-Custom CSS is stored in css/style.css and css/gallery.css. Flexbox arranges the header, navigation and button groups. CSS Grid arranges introductory content, apartment cards and the footer. Positioning places labels over images. Hover and focus styles highlight interactive controls. Alternating table rows use nth-child. The root defines navy, brown and cream CSS variables. Roboto is loaded through Google Fonts with fallback fonts. Images below the first screen use lazy loading.
-Media queries at 992px and 576px adjust the layout for tablets and phones. Bootstrap containers, rows, columns, spacing utilities and buttons support the responsive layout. On small screens navigation wraps, sections stack and text sizes and spacing adjust. Responsive table containers allow wide tables to scroll within the page.
+Contact contains contact information, a demonstration enquiry form, registration validation and demo sign-in.
+
+Implemented Features
+
+Light and Dark Theme
+
+Visitors can switch between light and dark themes on every page. The selected theme is stored in localStorage and remains active after refreshing the page or navigating to another page.
+
+Demo Sign-in and Sign-out
+
+The sign-in form validates the display name and email format. Only the practice display name and login status are stored in localStorage. The email is not saved.
+
+Signed-in visitors see a welcome message and a sign-out button. The login state remains active after refreshing. Signing out removes the saved login state without removing the selected theme.
+
+This feature demonstrates browser-local login state. It does not authenticate a real account.
+
+Animated FAQ
+
+The Home page contains five questions related to apartment renting. jQuery slideToggle opens and closes the answers with a sliding animation. Plus and minus indicators show whether each answer is open or closed.
+
+Weather API
+
+The Apartments page uses the Open-Meteo API to display a three-day weather forecast for Almaty or Astana.
+
+JavaScript fetch retrieves JSON data and creates forecast cards containing dates, minimum and maximum temperatures, weather descriptions and precipitation probability.
+
+Visitors can select a city and refresh the forecast. Loading messages, request timeouts and error handling provide feedback when data cannot be loaded.
+
+Apartment Search and Gallery
+
+Live search matches apartment names and locations without depending on letter case. Search and city filters work together.
+
+The photo gallery includes previous, next and close controls. Keyboard arrows change photos and Escape closes the lightbox.
+
+Viewing Shortlist
+
+Visitors can add apartments, edit entries, cancel edits and delete entries after confirmation. The table updates without reloading the page.
+
+The shortlist is stored in memory and resets when the page reloads.
+
+Registration Validation
+
+The practice registration form checks required fields, email format, password strength and password confirmation. Feedback appears beside the fields. No account is created and no password is saved.
+
+Design and Responsiveness
+
+All five pages share a consistent navy, brown and cream design with common navigation and footer elements.
+
+External CSS files provide styling. Flexbox, CSS Grid, Bootstrap and media queries support desktop, tablet and mobile layouts.
 
 Technologies Used
+
 HTML5
 CSS3
 Bootstrap 5.3.3
 JavaScript
 jQuery 3.7.1
+localStorage
+Fetch API
+Open-Meteo API
 Google Fonts
-No backend is used.
 
-Project Files
+Main Files
+
 index.html contains the Home page.
-apartments.html contains apartment listings, search, filters and the gallery.
-prices.html contains rental prices, the budget example and the viewing shortlist.
-about.html contains the project description and values.
-contact.html contains contact details, enquiry and registration forms.
-css/style.css contains shared styles.
-css/gallery.css contains gallery and lightbox styles.
-js/script.js handles registration validation and password strength.
-js/apartments.js handles live search, city filtering and the jQuery gallery.
-js/prices.js handles shortlist creation, display, inline editing and confirmed deletion.
-hs1.jpg, hs2.jpg and hs3.jpg contain local apartment images.
-README.md contains project documentation.
+apartments.html contains apartment listings, the gallery and weather section.
+prices.html contains rental prices and the viewing shortlist.
+about.html contains information about the project.
+contact.html contains enquiry, registration and sign-in forms.
 
-How to Run
-Open index.html in a browser or use Live Server in VS Code. Keep the folder structure unchanged. Internet access is needed for Bootstrap, jQuery, Google Fonts and externally linked images. Bootstrap and jQuery are currently loaded through CDNs.
+css/style.css contains shared styles and responsive layouts.
+css/gallery.css contains gallery and lightbox styles.
+css/theme.css contains dark theme styles.
+css/faq.css contains animated FAQ styles.
+css/weather.css contains weather section styles.
+
+js/script.js handles registration validation.
+js/apartments.js handles apartment search, city filters and the gallery.
+js/prices.js handles the viewing shortlist.
+js/auth.js handles demo sign-in and sign-out.
+js/theme.js handles theme selection and persistence.
+js/faq.js handles the animated FAQ.
+js/weather.js handles weather API requests and forecast rendering.
 
 Individual Contributions
-The recorded original project contributions are listed below.
-Temirlan Bolat created the Home, Apartments and Prices pages.
-Akshit Khokher created the About Us and Contact pages.
-Kairatuly Miras created the shared CSS styles.
-Endterm contributions
-Akshit Khokher developed the renter registration form, email validation, password confirmation, strength meter and live field feedback.
-Temirlan Bolat developed apartment search, city filters, the responsive photo gallery and the lightbox with jQuery fade effects.
-Miras Kairatuly developed the viewing shortlist, inline editing, confirmed deletion and project documentation. Each member should understand the whole project and be able to explain the code during the defence.
 
-Testing
-Local browser checks cover shortlist creation, editing, cancellation and confirmed deletion, registration validation, password strength, combined search and city filters, gallery navigation and closing, and page layouts at 390px, 768px and 1440px.
-Functional checks use local copies of the same Bootstrap and jQuery versions when external network access is unavailable. External image and font loading and the published website still need an online check.
+Temirlan Bolat was responsible for the sign-in form, input validation, persistent login state, sign-out and weather API integration.
 
-Publication
-Published website URL: https://temirlan-fr.github.io/midterm-apartment-renting/
-GitHub repository URL: https://github.com/temirlan-fr/midterm-apartment-renting
-Continue using the original repository for the endterm project.
+Kairatuly Miras was responsible for dark theme styles, theme switching, theme persistence, responsive improvements and stylesheet order.
 
-Content and Image Credits
-Apartment names, prices and contact details are examples for a student project. Photos do not represent verified rental listings. The contact email uses an example domain and social links lead to general platforms.
-The original template photo sources were Clay Banks on Unsplash, Curtis Adams on Pexels and Furkan Tumer on Pexels. If photos are replaced, update the credits to match the images used.
+Akshit Khokher was responsible for the five-question FAQ, jQuery animations, expansion indicators and project documentation.
+
+How to Run
+
+Open the project folder in Visual Studio Code and start index.html using Live Server.
+
+Keep the existing folder structure unchanged. Internet access is required for the weather API and externally loaded libraries, fonts and photos.
+
+Project Links
+
+Website
+https://temirlan-fr.github.io/midterm-apartment-renting/
+
+GitHub Repository
+https://github.com/temirlan-fr/midterm-apartment-renting
+
+API Documentation
+
+https://open-meteo.com/en/docs
+
+Credits
+
+Weather data is provided by Open-Meteo under the Creative Commons Attribution 4.0 license.
+
+Bootstrap, jQuery and Google Fonts are used in the website.
+
+AI Acknowledgement
+
+OpenAI ChatGPT and Codex assisted with requirements analysis, design improvements, code suggestions and explanations.
+
+Project Limitations
+
+Apartment listings, prices and contact details are examples for a student project. Photos illustrate interiors and do not represent verified rental properties.
+
+The website does not create real accounts, send enquiries or make bookings. Weather forecasts depend on an external service and may change.
+
+
 
 Project Screenshots
 
