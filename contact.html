@@ -166,10 +166,20 @@
                                     <small id="signin-email-error" class="text-danger" aria-live="polite"></small>
                                 </div>
 
-                                <button type="submit" class="btn main-button">Check details</button>
+                                <button type="submit" class="btn main-button">Sign in</button>
                             </form>
 
-                            <p id="signin-status" class="mt-3 mb-0" role="status">Practice form: the browser checks your details. No account is created and no sign-in information is saved.</p>
+                            <div id="signed-in-panel" hidden>
+                                <h3>Welcome, <span id="signed-in-name"></span>!</h3>
+                                <p>Your demo sign-in remains active after refreshing the page.</p>
+
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="apartments.html" class="btn outline-button">Explore apartments</a>
+                                    <button id="signout-button" class="btn main-button" type="button">Sign out</button>
+                                </div>
+                            </div>
+
+                           <p id="signin-status" class="mt-3 mb-0" role="status">Demo sign-in. Only your practice display name and login status are saved in this browser. Your email is not saved. No real account is created.</p>
                         </div>
                     </div>
                 </div>
@@ -205,6 +215,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-
+    <script src="js/auth.js"></script>
 </body>
 </html>
