@@ -125,9 +125,11 @@ Keep the existing folder structure unchanged. Internet access is required for th
 Project Links
 
 Website
+
 https://temirlan-fr.github.io/midterm-apartment-renting/
 
 GitHub Repository
+
 https://github.com/temirlan-fr/midterm-apartment-renting
 
 API Documentation
