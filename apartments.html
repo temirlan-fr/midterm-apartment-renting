@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/weather.css">
     <script src="js/theme.js"></script>
 </head>
 <body>
@@ -210,6 +211,42 @@
             </div>
         </section>
 
+        <section class="section weather-section" aria-labelledby="weather-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="subtitle">PLAN YOUR VIEWING</p>
+                    <h2 id="weather-title">Weather for your apartment visit</h2>
+                    <p>Choose a city and check the next three days before travelling to view an apartment.</p>
+                </div>
+
+                <form id="weather-form" class="weather-controls">
+                    <div class="weather-city-field">
+                        <label for="weather-city" class="form-label">Viewing city</label>
+                        <select id="weather-city" class="form-select">
+                            <option value="almaty">Almaty</option>
+                            <option value="astana">Astana</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn main-button">Refresh forecast</button>
+                </form>
+
+                <p id="weather-status" class="weather-status" role="status"></p>
+                <div id="weather-result" class="row g-3 weather-results" hidden></div>
+
+                <p class="contact-note">
+                    Weather data:
+                    <a href="https://open-meteo.com/" class="text-link" target="_blank" rel="noopener noreferrer">Open-Meteo</a>,
+                    <a href="https://creativecommons.org/licenses/by/4.0/" class="text-link" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.
+                    Forecasts may change.
+                </p>
+
+                <noscript>
+                    <p>Enable JavaScript to load the weather forecast.</p>
+                </noscript>
+            </div>
+        </section>
+
         <dialog id="photo-viewer" aria-labelledby="photo-title">
             <div id="photo-panel">
                 <h3 id="photo-title"></h3>
@@ -250,5 +287,6 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/apartments.js"></script>
+    <script src="js/weather.js"></script>
 
 </body>
