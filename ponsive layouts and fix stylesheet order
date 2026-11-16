@@ -1,0 +1,7 @@
+ about.html      |  2 [32m++[m
+ apartments.html |  2 [32m++[m
+ contact.html    |  2 [32m++[m
+ index.html      |  2 [32m++[m
+ js/theme.js     | 64 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ prices.html     |  2 [32m++[m
+ 6 files changed, 74 insertions(+)

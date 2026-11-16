@@ -1043,3 +1043,56 @@ footer small {
         transition: none !important;
     }
 }
+
+#signed-in-name {
+    overflow-wrap: anywhere;
+}
+
+.header-content > *,
+.footer-content > * {
+    min-width: 0;
+}
+
+.table-responsive {
+    max-width: 100%;
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .header-content {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .header-content nav {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .theme-controls {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form .main-button {
+        width: 100%;
+    }
+
+    #signed-in-panel .d-flex {
+        flex-direction: column;
+    }
+
+    #signed-in-panel .d-flex > a,
+    #signed-in-panel .d-flex > button {
+        width: 100%;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 14px;
+    }
+}
