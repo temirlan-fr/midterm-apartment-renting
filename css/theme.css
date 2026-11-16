@@ -1,0 +1,192 @@
+.header-content {
+    flex-wrap: wrap;
+}
+
+.theme-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.theme-controls .main-button {
+    min-height: 44px;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.theme-controls small {
+    max-width: 240px;
+    color: #c6ced8;
+    font-size: 12px;
+}
+
+.theme-controls small:empty {
+    display: none;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --surface: #203044;
+    --border: #516073;
+    --shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+[data-theme="dark"] body {
+    color: #e1e7ef;
+    background-color: #152131;
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] .hero,
+[data-theme="dark"] .page-heading {
+    background-color: #101a28;
+}
+
+[data-theme="dark"] .soft-section {
+    background-color: #1b293b;
+}
+
+[data-theme="dark"] .banner {
+    background-color: #263344;
+}
+
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .apartment-card,
+[data-theme="dark"] .budget-box,
+[data-theme="dark"] .contact-form {
+    background-color: #203044;
+    border-color: #516073;
+}
+
+[data-theme="dark"] .card-bottom,
+[data-theme="dark"] .budget-row {
+    border-color: #516073;
+}
+
+[data-theme="dark"] .notice {
+    color: #e1e7ef;
+    background-color: #2a3b50;
+    border-left-color: #bf9570;
+}
+
+[data-theme="dark"] .tag {
+    color: #f0f4fa;
+    background-color: #24364b;
+}
+
+[data-theme="dark"] .location,
+[data-theme="dark"] .apartment-details,
+[data-theme="dark"] .apartment-price span,
+[data-theme="dark"] .featured-price,
+[data-theme="dark"] .contact-note,
+[data-theme="dark"] #demo,
+[data-theme="dark"] .price-table caption,
+[data-theme="dark"] .faq-list details p {
+    color: #c5d0df;
+}
+
+[data-theme="dark"] .apartment-price strong,
+[data-theme="dark"] .featured-price strong,
+[data-theme="dark"] .budget-total,
+[data-theme="dark"] .faq-list summary {
+    color: #f0f4fa;
+}
+
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .step-number,
+[data-theme="dark"] .text-link {
+    color: #dfb58d;
+}
+
+[data-theme="dark"] .text-link:hover,
+[data-theme="dark"] .faq-list summary:hover {
+    color: #f0d9c2;
+}
+
+[data-theme="dark"] .outline-button {
+    color: #eef2f8;
+    border-color: #b4c3d6;
+}
+
+[data-theme="dark"] .outline-button:hover,
+[data-theme="dark"] .outline-button:focus-visible,
+[data-theme="dark"] .outline-button:active {
+    color: white;
+    background-color: #354963;
+    border-color: #b4c3d6;
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    color: #eef2f8;
+    background-color: #152131;
+    border-color: #8091a8;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: #aebed2;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    color: #eef2f8;
+    background-color: #152131;
+    border-color: #dfb58d;
+    box-shadow: 0 0 0 3px rgba(223, 181, 141, 0.18);
+}
+
+[data-theme="dark"] .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23e1e7ef' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+[data-theme="dark"] .text-danger {
+    color: #ffadb6 !important;
+}
+
+[data-theme="dark"] .text-success {
+    color: #96dcaf !important;
+}
+
+[data-theme="dark"] .price-table {
+    color: #e1e7ef;
+    background-color: #203044;
+}
+
+[data-theme="dark"] .price-table thead {
+    background-color: #101a28;
+}
+
+[data-theme="dark"] .price-table th,
+[data-theme="dark"] .price-table td {
+    border-color: #516073;
+}
+
+[data-theme="dark"] .price-table tbody tr:nth-child(even) {
+    background-color: #2a3b50;
+}
+
+[data-theme="dark"] .faq-list,
+[data-theme="dark"] .faq-list details {
+    border-color: #516073;
+}
+
+[data-theme="dark"] .gallery-photo,
+[data-theme="dark"] .gallery-photo:hover,
+[data-theme="dark"] .gallery-photo:focus-visible,
+[data-theme="dark"] #photo-viewer {
+    color: #eef2f8;
+    background-color: #203044;
+    border-color: #516073;
+}
+
+[data-theme="dark"] :focus-visible {
+    outline-color: #dfb58d;
+}
+
+@media (max-width: 576px) {
+    .theme-controls {
+        width: 100%;
+    }
+}
