@@ -144,6 +144,37 @@
                 </div>
             </div>
         </section>
+
+        <section class="section soft-section" id="account">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="contact-form">
+                            <h2>Your QONYS account</h2>
+                            <p>Use a practice display name and an example email.</p>
+
+                            <form id="signin-form" action="#signin-status" method="get">
+                                <div class="mb-3">
+                                    <label for="signin-name" class="form-label">Display name</label>
+                                    <input id="signin-name" class="form-control" type="text" minlength="2" maxlength="40" autocomplete="nickname" aria-describedby="signin-name-error" required>
+                                    <small id="signin-name-error" class="text-danger" aria-live="polite"></small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="signin-email" class="form-label">Practice email</label>
+                                    <input id="signin-email" class="form-control" type="email" maxlength="254" placeholder="student@example.com" autocomplete="off" aria-describedby="signin-email-error" required>
+                                    <small id="signin-email-error" class="text-danger" aria-live="polite"></small>
+                                </div>
+
+                                <button type="submit" class="btn main-button">Check details</button>
+                            </form>
+
+                            <p id="signin-status" class="mt-3 mb-0" role="status">Practice form: the browser checks your details. No account is created and no sign-in information is saved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -168,6 +199,9 @@
         </div>
 
         <p class="copyright">© 2026 QONYS. Student project. Listings and contact details are examples.</p>
+        <p class="container">
+            <small>AI acknowledgement: OpenAI ChatGPT / Codex assisted with requirements analysis, design improvements, code suggestions and explanations.</small>
+        </p>
     </footer>
 
     <script src="js/script.js"></script>
