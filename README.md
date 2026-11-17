@@ -44,6 +44,8 @@ It contains the main introduction, navigation links, apartment selection steps, 
 
 The FAQ contains five questions about rental costs, deposits, price comparisons, demonstration bookings and available cities.
 
+![Home page in light theme](screenshots/home-light.png)
+
 Apartments
 
 The Apartments page presents three sample properties.
@@ -58,6 +60,8 @@ Each listing contains a photograph, location, description, room count, area and 
 
 The page also includes live search, city filters, a photo gallery and a three-day weather forecast.
 
+![Apartments page with search and city filters](screenshots/apartments-listings.png)
+
 Prices
 
 The Prices page compares the apartments in a table.
@@ -68,11 +72,15 @@ Additional sections explain costs that may be separate from rent and show a firs
 
 The viewing shortlist allows visitors to create and manage their own list of apartments to visit.
 
+![Prices page with Viewing Shortlist](screenshots/prices-shortlist.png)
+
 About Us
 
 The About Us page explains the project idea, its values and the purpose of the website.
 
 It describes factors visitors should consider when choosing an apartment, including location, available space and total cost.
+
+![About Us page](screenshots/about.png)
 
 Contact
 
@@ -83,6 +91,8 @@ The enquiry form allows visitors to select an apartment and practise entering th
 The registration form demonstrates JavaScript validation and password strength feedback.
 
 The sign-in form demonstrates persistent browser-local login state.
+
+![Contact page with Demo Sign-in welcome panel](screenshots/contact-signin.png)
 
 Navigation
 
@@ -168,6 +178,8 @@ The animation respects the reduced-motion preference.
 
 If jQuery is unavailable, the original HTML details elements remain usable.
 
+![Dark theme and Animated FAQ](screenshots/home-dark-faq.png)
+
 Weather API Integration
 
 The Apartments page uses the Open-Meteo public weather API.
@@ -183,6 +195,8 @@ JavaScript fetch sends the request and response.json processes the returned JSON
 The page dynamically creates forecast cards containing the date, minimum temperature, maximum temperature, weather description and precipitation probability.
 
 Forecast dates use the requested local timezone.
+
+![3-day Weather Forecast via Open-Meteo API](screenshots/apartments-weather.png)
 
 API Interaction and Error Handling
 
